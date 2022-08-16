@@ -1,0 +1,66 @@
+#app {
+    left: 10%;
+    top: 10%;
+    background-color: rgb(60, 20, 0);
+    color: aliceblue;
+    padding: 10px;
+}
+
+#app h2 {
+    color: rgb(168, 114, 4);
+}
+
+body {
+    background-color: azure;
+}
+
+.dark {
+    background-color: black;
+}
+
+.light {
+    background-color: azure;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    width: max-content;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+p{
+    margin: 0 0 10px 0;
+}
+
+.info{
+    font-family: Helvetica;
+    font-weight: 600;
+}
+   /* Mouse events */
+.box{
+    padding-top: 85px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    font-family: Calibri;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(24, 3, 3);
+    margin: 20px;
+    display: inline-block;
+    border-radius: 20px;
+}
