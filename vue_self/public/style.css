@@ -1,61 +1,23 @@
 body {
     background-image: url(./lightsky.jpg);
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-repeat: no-repeat;
 }
 
-div table.dataTable {
-    border: 1px solid black;
-    text-align: center;
-    display: block;
-    margin: 10px auto;
-    width: max-content;
-    border-collapse: collapse;
-
+::-webkit-scrollbar{
+    width:20px;
+    height: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+        to bottom,
+        #ff850a,
+        #ff3474
+    );
+    border-radius: 50px;
 }
 
-td,
-th {
-    border: 1px solid black;
-    padding: 8px 15px;
-}
-
-h1 {
-    border: 3px solid rgb(0, 44, 66);
-    border-radius: 9px;
-    padding: 10px 40px;
-    width: 34%;
-    margin: 0 auto;
-}
-
-h1:hover {
-    cursor: pointer;
-}
-
-button {
-    background-color: rgba(7, 205, 232, 0.13);
-    border: 2px solid rgb(0, 36, 41);
-    border-radius: 10px;
-    height: 43px;
-    width: 137px;
-    text-align: center;
-    cursor: pointer;
-    font-family: calibri;
-    font-weight: bold;
-    color: rgb(49, 16, 0);
-    font-size: 15px;
-    margin: 10px 15px;
-}
-
-button:active {
-    transform: scale(0.97);
-}
-
-h3:hover {
-    cursor: pointer;
-}
-.smiley{
-    margin: 0 20 0 0px;
-    /* padding: 0 20px; */
+::-webkit-scrollbar-track{
+    background: #474747;
 }

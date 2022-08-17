@@ -14,7 +14,7 @@
         title="python"
         href="https://www.python.org/"
         coords="24,13,161,45"
-        shape="rect"
+        shape="rect" 
       />
       <area
         target="'_blank"

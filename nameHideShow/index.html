@@ -13,26 +13,29 @@
 
 <body>
     <div id="app">
-        <h2>Wohlig Transformations</h2>
+        <h1>Wohlig Transformations</h1>
         <div class="info" v-if="showname">
-            <p>{{ Name }} - {{ Role }} - {{ Age }}</p>
+            <p>{{ Name }} - {{ Role }} : {{ Age }}</p>
         </div>
         <button @click="ChangeName()">
-            <span >Change Name</span>
+            <span>Change Name</span>
         </button>
         <button @click="ShowHide()">
             <span v-if="showname">Hide</span>
             <span v-if="!showname">Show</span> <!-- can use v-else on show span instead of ! -->
         </button>
-        <div v-show="showname">Currently showing data</div>
-            
+        <div v-if="showname">
+            <ul>
+                <li @click="goodBad()" v-for="naMe in names" :class="{good: naMe.isGood}">{{ naMe.Name }} - {{ naMe.Role }}      ({{ naMe.Exp }})</li>
+            </ul>
+        </div>
+        <!-- <div v-show="showname">Currently showing data</div> -->
         <!-- Mouse events -->
-        <div class="box" @mouseover="handleEvent">Mouseover (enter)</div>
+        <!-- <div class="box" @mouseover="handleEvent">Mouseover (enter)</div>
         <div class="box" @mouseleave="handleEvent">MouseLeave (Leave)</div>
         <div class="box" @dblclick="handleEvent">Double click</div>
         <div class="box" @mousemove="handleMouseMove">Position : {{ x }} {{ y }}</div>
-
-    </div>
+    </div> -->
     <script src="./app.js"></script>
 </body>
 
