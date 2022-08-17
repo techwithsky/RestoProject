@@ -7,7 +7,7 @@
     <!-- <FormVue /> -->
     <!-- <filterVue /> -->
     <axiosFetch />
-    <!-- <activeBoot /> -->
+    <activeBoot />
   </div>
 </template>
 
@@ -19,7 +19,7 @@
 // import FormVue from './components/form.vue'
 // import filterVue from './components/filter.vue'
 import axiosFetch from "./components/axiosFetch.vue";
-// import activeBoot from './components/activeBoot.vue'
+import activeBoot from './components/activeBoot.vue'
 
 export default {
   name: "App",
@@ -31,7 +31,7 @@ export default {
     // FormVue
     // filterVue
     axiosFetch,
-    // activeBoot
+    activeBoot
   },
 };
 </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
