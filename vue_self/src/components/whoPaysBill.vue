@@ -24,7 +24,7 @@
       <div class="resultContainer">
         <h3>The loser is</h3>
         <span>{{ this.result }}</span><br />
-        <button class="resultButton" @click="reset" v-if="showReset">Reset</button>
+        <button id="resultButton" @click="reset" v-if="showReset">Reset</button>
       </div>
     </div>
     <!-- <button @click="toggleDiv">Toggle div</button> -->
@@ -132,12 +132,28 @@ export default {
 .resultButton {
   /* width: 200px; */
   border:2px solid rgb(55, 55, 55);
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #e3e3e3;
   color: rgb(55, 55, 55);
   padding: 5px 30px;
 }
 .resultButton:active {
+  /* width: 200px; */
+  border:2px solid #e3e3e3;
+  border-radius: 5px;
+  background-color: rgb(55, 55, 55);
+  color:  #e3e3e3;
+  padding: 5px 30px;
+}
+#resultButton {
+  /* width: 200px; */
+  border:2px solid rgb(55, 55, 55);
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  color: rgb(55, 55, 55);
+  padding: 5px 30px;
+}
+#resultButton:active {
   /* width: 200px; */
   border:2px solid #e3e3e3;
   border-radius: 5px;
@@ -152,7 +168,8 @@ export default {
 .listOfNames {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: max-content;
 }
 .listOfNames div {
   width: max-content;
