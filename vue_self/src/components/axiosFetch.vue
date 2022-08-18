@@ -54,7 +54,7 @@ Vue.use(VueAxios, axios);
 export default {
   name: "axiosFetch",
   data() {
-    return { list: undefined, highSalary: false };
+    return { list: undefined, highSalary:                                                                                                          false };
   },
   mounted() {
     Vue.axios
@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 table,
 td,
 th {

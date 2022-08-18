@@ -3,8 +3,10 @@
     <div id="names" class="container" v-if="show">
       <h1>Who pays the bill</h1>
       <div class="inputContainer">
-        <input type="text" v-model="inputName" />
-        <button @click="addName">Add</button>
+        <input id="inp" type="text" v-model="inputName" />
+        <button id="btn" v-on:keyup.enter="onEnter" @click="addName">
+          Add
+        </button>
       </div>
       <div class="errorLabel" v-if="showError">You must enter a name</div>
       <div class="listOfNames" v-if="showName">
@@ -21,9 +23,8 @@
     <div id="result" v-if="!show">
       <div class="resultContainer">
         <h3>The loser is</h3>
-        <span>{{ this.result }}</span
-        ><br />
-        <button @click="reset" v-if="showReset">Reset</button>
+        <span>{{ this.result }}</span><br />
+        <button class="resultButton" @click="reset" v-if="showReset">Reset</button>
       </div>
     </div>
     <!-- <button @click="toggleDiv">Toggle div</button> -->
@@ -48,6 +49,12 @@ export default {
       this.showName = false;
     },
     addName() {
+      const input = document.getElementById("inp");
+      input.focus();
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", function handleClick() {
+        input.focus();
+      });
       console.log(this.names);
       if (this.validate(this.inputName)) {
         console.log("its valid");
@@ -77,6 +84,13 @@ export default {
     reset() {
       (this.show = true), (this.names = []);
     },
+    onEnter() {
+      let randomResult =
+        this.names[Math.floor(Math.random() * this.names.length)];
+      this.result = randomResult;
+      this.show = false;
+      this.showReset = true;
+    },
   },
 };
 </script>
@@ -89,15 +103,14 @@ export default {
 .container h1 {
   font-family: anton;
 }
-.inputContainer{
-      margin: 20px 0 ;
+.inputContainer {
+  margin: 20px 0;
 }
 .inputContainer input {
   background-color: #e3e3e3;
   border-radius: 5px 0 0 5px;
   padding-left: 10px;
   border: 1px solid rgb(0, 0, 0);
-
 }
 .inputContainer button {
   background-color: rgb(7 189 225);
@@ -116,8 +129,30 @@ export default {
   font-family: anton;
   font-size: 30px;
 }
+.resultButton {
+  /* width: 200px; */
+  border:2px solid rgb(55, 55, 55);
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  color: rgb(55, 55, 55);
+  padding: 5px 30px;
+}
+.resultButton:active {
+  /* width: 200px; */
+  border:2px solid #e3e3e3;
+  border-radius: 5px;
+  background-color: rgb(55, 55, 55);
+  color:  #e3e3e3;
+  padding: 5px 30px;
+  /* transform: scale(0.97); */
+}
 .errorLabel {
   color: rgb(233, 30, 30);
+}
+.listOfNames {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .listOfNames div {
   width: max-content;
@@ -127,10 +162,5 @@ export default {
   padding: 2px 7px;
   margin: 10px;
   min-width: 50px;
-}
-.listOfNames {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 </style>

@@ -5,7 +5,9 @@ import Vue from 'vue'
 import './plugins/bootstrap-vue'
 // import './plugins/bootstrap-vue'?0
 import App from './App.vue'
+import VueHotkey from 'v-hotkey'
 
+Vue.use(VueHotkey)
 Vue.config.productionTip = false
 Vue.filter('upper',function(val){
   return val.toUpperCase()
