@@ -2,22 +2,14 @@
   <div>
     <h1 v-show="show">
       Hello Akash
-      <span class="smiley" @click="gitAkash()"
-        ><i class="fa fa-github" style="font-size: 36px"></i
-      ></span>
-      <span class="smiley" @click="instaAkash()"
-        ><i class="fa fa-instagram" style="font-size: 36px"></i
-      ></span>
+      <span class="smiley" @click="gitAkash()"><i class="fa fa-github" style="font-size: 36px"></i></span>
+      <span class="smiley" @click="instaAkash()"><i class="fa fa-instagram" style="font-size: 36px"></i></span>
     </h1>
     <h3 v-show="show" @click="click1()">Software Developer</h3>
     <h1 v-show="!show" v-bind:class="{ good: isGood }">
       Hello Krishnan
-      <span class="smiley" @click="gitHari()"
-        ><i class="fa fa-github" style="font-size: 36px"></i
-      ></span>
-      <span class="smiley" @click="instaHari()"
-        ><i class="fa fa-instagram" style="font-size: 36px"></i
-      ></span>
+    pan class="smiley" @click="gitHari()"><i class="fa fa-github" style="font-size: 36px"></i></span>
+      <span class="smiley" @click="instaHari()"><i class="fa fa-instagram" style="font-size: 36px"></i></span>
     </h1>
     <h3 v-show="!show" @click="click2()">Software Destroyer</h3>
     <button @click="display">Change name</button>

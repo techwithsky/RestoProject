@@ -8,28 +8,31 @@
           <th>Salary</th>
           <th>Age</th>
         </tr>
-        <tr v-for="emp in list" v-bind:key="emp.id">
+        <tr v-for="emp in list" :key="emp.id">
           <td>{{ emp.employee_name }}</td>
           <td
             v-if="emp.employee_salary > 400000"
-            v-bind:class="{ techLead: true }">
+            v-bind:class="{ techLead: true }"
+          >
             {{ emp.employee_salary }}
           </td>
           <td
             v-else-if="
-              emp.employee_salary > 300000 && emp.employee_salary < 400000"
-            v-bind:class="{ senior: true }">
+              (emp.employee_salary > 300000 && emp.employee_salary < 400000) v-bind:class="{ senior: true }">
             {{ emp.employee_salary }}
           </td>
           <td
             v-else-if="
-              emp.employee_salary > 100000 && emp.employee_salary < 300000"
-            v-bind:class="{ junior: true }">
+              emp.employee_salary > 100000 && emp.employee_salary < 300000
+            "
+            v-bind:class="{ junior: true }"
+          >
             {{ emp.employee_salary }}
           </td>
           <td
             v-else-if="emp.employee_salary < 100000"
-            v-bind:class="{ fresher: true }">
+            v-bind:class="{ fresher: true }"
+          >
             {{ emp.employee_salary }}
           </td>
           <td v-else>
@@ -64,7 +67,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 table,
 td,
 th {
@@ -79,14 +82,14 @@ table {
   width: 40%;
   margin: 0 auto;
 }
-.senior {    
-    /* salary > 400000 */
+.senior {
+  /* salary > 400000 */
   background-color: green;
   color: yellow;
 }
 
-.junior{
-   /* 400000 > salary > 300000 */
+.junior {
+  /* 400000 > salary > 300000 */
   background-color: rgb(226, 211, 0);
 }
 .fresher {
