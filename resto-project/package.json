@@ -45,6 +45,14 @@
   ],
   "description": "## Project setup ``` npm install ```",
   "main": "babel.config.js",
-  "author": "",
-  "license": "ISC"
+  "author": "Akash",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akashpawar11/RestoProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Akashpawar11/RestoProject/issues"
+  },
+  "homepage": "https://github.com/Akashpawar11/RestoProject#readme"
 }
