@@ -1,22 +1,60 @@
 {
   "users": [
     {
-      "name": "qwerty",
-      "email": "qwert123@gmail.com",
-      "password": "123456789",
+      "name": "123",
+      "email": "456",
+      "password": "456",
       "id": 1
     },
     {
-      "name": "KN",
-      "email": "Kn@techlead.com",
-      "password": "12345",
+      "name": "Krishnan",
+      "email": "K@wohlig.com",
+      "password": "k123",
       "id": 2
     },
     {
-      "name": "roy",
-      "email": "roy@roy.com",
-      "password": "royroy",
+      "name": "",
+      "email": "",
+      "password": "fh",
       "id": 3
+    },
+    {
+      "name": "asd",
+      "email": "asdadas",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "asdasd",
+      "email": "dfsdsda",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "sdsadasd",
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 7
+    }
+  ],
+  "Restaurants": [
+    {
+      "id": 1,
+      "name": "Dominos",
+      "address": "Ambernath",
+      "contact": 88887777
+    },
+    {
+      "id": 2,
+      "name": "KFC",
+      "address": "Badlapur",
+      "contact": 55556666
     }
   ]
 }
