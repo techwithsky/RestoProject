@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "qwerty",
+      "email": "qwert123@gmail.com",
+      "password": "123456789",
+      "id": 1
+    },
+    {
+      "name": "KN",
+      "email": "Kn@techlead.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "name": "roy",
+      "email": "roy@roy.com",
+      "password": "royroy",
+      "id": 3
+    }
+  ]
+}

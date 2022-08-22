@@ -8,7 +8,8 @@
     <!-- <filterVue /> -->
     <!-- <axiosFetch /> -->
     <!-- <activeBoot /> -->
-    <billApp />
+                                <!-- @updateD is name of event we decalre in updateDev method -->
+    <!-- <billApp :developer="developer" @updateD="developer = $event" /> -->
   </div>
 </template>
 
@@ -21,20 +22,25 @@
 // import filterVue from './components/filter.vue'
 // import axiosFetch from "./components/axiosFetch.vue";
 // import activeBoot from './components/activeBoot.vue'
-import billApp from "./components/whoPaysBill.vue";
+// import billApp from "./components/whoPaysBill.vue";
 
 export default {
   name: "App",
+  data() {
+    return {
+      developer: 'Akash'
+    }
+  },
   components: {
     // Home_1,
-    // imageMap
+    // imageMap 
     // dataBinding
     // lifeCycle,
     // FormVue
     // filterVue
     // axiosFetch,
     // activeBoot
-    billApp,
+    // billApp,
   },
 };
 </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
@@ -53,14 +59,17 @@ export default {
   width: 20px;
   height: 20px;
 }
+
 ::-moz-scrollbar {
   width: 20px;
   height: 20px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #00c0e2, #ff3474);
   border-radius: 50px;
 }
+
 ::-moz-scrollbar-thumb {
   background: linear-gradient(to bottom, #00c0e2, #ff3474);
   border-radius: 50px;
@@ -69,6 +78,7 @@ export default {
 ::-webkit-scrollbar-track {
   background: #474747;
 }
+
 ::-moz-scrollbar-track {
   background: #474747;
 }

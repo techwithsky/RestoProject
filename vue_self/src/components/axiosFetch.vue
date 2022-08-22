@@ -10,29 +10,19 @@
         </tr>
         <tr v-for="emp in list" :key="emp.id">
           <td>{{ emp.employee_name }}</td>
-          <td
-            v-if="emp.employee_salary > 400000"
-            v-bind:class="{ techLead: true }"
-          >
+          <td v-if="emp.employee_salary > 400000" v-bind:class="{ techLead: true }">
             {{ emp.employee_salary }}
           </td>
-          <td
-            v-else-if="
-              (emp.employee_salary > 300000 && emp.employee_salary < 400000) v-bind:class="{ senior: true }">
+          <td v-else-if="
+          (emp.employee_salary > 300000 && emp.employee_salary < 400000) v - bind: class=" { senior: true }">
             {{ emp.employee_salary }}
           </td>
-          <td
-            v-else-if="
-              emp.employee_salary > 100000 && emp.employee_salary < 300000
-            "
-            v-bind:class="{ junior: true }"
-          >
+          <td v-else-if="
+            emp.employee_salary > 100000 && emp.employee_salary < 300000
+          " v-bind:class="{ junior: true }">
             {{ emp.employee_salary }}
           </td>
-          <td
-            v-else-if="emp.employee_salary < 100000"
-            v-bind:class="{ fresher: true }"
-          >
+          <td v-else-if="emp.employee_salary < 100000" v-bind:class="{ fresher: true }">
             {{ emp.employee_salary }}
           </td>
           <td v-else>
@@ -54,7 +44,7 @@ Vue.use(VueAxios, axios);
 export default {
   name: "axiosFetch",
   data() {
-    return { list: undefined, highSalary:                                                                                                          false };
+    return { list: undefined, highSalary: false };
   },
   mounted() {
     Vue.axios
@@ -78,10 +68,12 @@ th {
   font-size: 20px;
   background-color: rgba(240, 248, 255, 0.389);
 }
+
 table {
   width: 40%;
   margin: 0 auto;
 }
+
 .senior {
   /* salary > 400000 */
   background-color: green;
@@ -92,10 +84,12 @@ table {
   /* 400000 > salary > 300000 */
   background-color: rgb(226, 211, 0);
 }
+
 .fresher {
   background-color: rgb(156, 0, 0);
   color: #fff;
 }
+
 .techLead {
   /* background-color: rgb(0, 181, 218); */
   color: #fff;

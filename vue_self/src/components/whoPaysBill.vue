@@ -2,6 +2,8 @@
   <div>
     <div id="names" class="container" v-if="show">
       <h1>Who pays the bill</h1>
+      <button @click="updateDev">update developer</button>
+      <h6>developer : {{ developer }}</h6>
       <div class="inputContainer">
         <input id="inp" type="text" v-model="inputName" />
         <button id="btn" v-on:keyup.enter="onEnter" @click="addName">
@@ -44,6 +46,7 @@ export default {
       showReset: false,
     };
   },
+  props: ['developer'],
   methods: {
     toggleName() {
       this.showName = false;
@@ -91,6 +94,10 @@ export default {
       this.show = false;
       this.showReset = true;
     },
+    updateDev() {
+      // this.developer = 'Akash P.'
+      this.$emit('updateD','Akash P')
+    }
   },
 };
 </script>
@@ -100,18 +107,22 @@ export default {
   margin: auto;
   font-family: calibri;
 }
+
 .container h1 {
   font-family: anton;
 }
+
 .inputContainer {
   margin: 20px 0;
 }
+
 .inputContainer input {
   background-color: #e3e3e3;
   border-radius: 5px 0 0 5px;
   padding-left: 10px;
   border: 1px solid rgb(0, 0, 0);
 }
+
 .inputContainer button {
   background-color: rgb(7 189 225);
   color: #fff;
@@ -120,57 +131,67 @@ export default {
   border: none;
   padding: 2px 8px;
 }
+
 .resultContainer h3 {
   font-family: anton;
   font-size: 40px;
   color: rgb(0, 179, 255);
 }
+
 .resultContainer span {
   font-family: anton;
   font-size: 30px;
 }
+
 .resultButton {
   /* width: 200px; */
-  border:2px solid rgb(55, 55, 55);
+  border: 2px solid rgb(55, 55, 55);
   border-radius: 10px;
   background-color: #e3e3e3;
   color: rgb(55, 55, 55);
   padding: 5px 30px;
 }
+
 .resultButton:active {
   /* width: 200px; */
-  border:2px solid #e3e3e3;
-  border-radius: 5px;
+  border: 2px solid #e3e3e3;
+  border-radius: 13px;
   background-color: rgb(55, 55, 55);
-  color:  #e3e3e3;
+  color: #e3e3e3;
   padding: 5px 30px;
 }
+
 #resultButton {
   /* width: 200px; */
-  border:2px solid rgb(55, 55, 55);
-  border-radius: 5px;
+  border: 2px solid rgb(55, 55, 55);
+  border-radius: 13px;
   background-color: #e3e3e3;
   color: rgb(55, 55, 55);
   padding: 5px 30px;
+  margin: 30px;
 }
+
 #resultButton:active {
   /* width: 200px; */
-  border:2px solid #e3e3e3;
+  border: 2px solid #e3e3e3;
   border-radius: 5px;
   background-color: rgb(55, 55, 55);
-  color:  #e3e3e3;
+  color: #e3e3e3;
   padding: 5px 30px;
   /* transform: scale(0.97); */
 }
+
 .errorLabel {
   color: rgb(233, 30, 30);
 }
+
 .listOfNames {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: max-content;
 }
+
 .listOfNames div {
   width: max-content;
   background-color: rgb(0, 145, 181);
