@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "name": "123",
+      "email": "456",
+      "password": "456",
+      "id": 1
+    },
+    {
+      "name": "Krishnan",
+      "email": "K@wohlig.com",
+      "password": "k123",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "fh",
+      "id": 3
+    },
+    {
+      "name": "asd",
+      "email": "asdadas",
+      "password": "",
+      "id": 4
+    },
+    {
+      "name": "asdasd",
+      "email": "dfsdsda",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "sdsadasd",
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 7
+    },
+    {
+      "name": "kk",
+      "email": "kk",
+      "password": "kk",
+      "id": 8
+    },
+    {
+      "name": "q",
+      "email": "q",
+      "password": "q",
+      "id": 9
+    },
+    {
+      "name": "o",
+      "email": "o",
+      "password": "o",
+      "id": 10
+    }
+  ],
+  "Restaurants": [
+    {
+      "id": 1,
+      "name": "Dominos",
+      "address": "Ambernath",
+      "contact": 88887777
+    },
+    {
+      "name": "asd",
+      "address": "asd",
+      "contact": 123,
+      "id": 2
+    }
+  ]
+}
