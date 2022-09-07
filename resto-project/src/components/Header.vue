@@ -1,9 +1,9 @@
 <template>
     <div class="nav">
-        <a href="/">Home</a>
-        <a href="">Add Restaurant</a>
-        <a href="">Update Restaurant</a>
-        <a id="logoutBtn" @click="logout" href="">Logout</a>
+        <RouterLink to="/">Home</RouterLink>
+        <router-link to="/add">Add Restaurant</router-link>
+        <router-link to="/update">Update Restaurant</router-link>
+        <router-link id="logoutBtn" @click="logout" to="">Logout</router-link>
     </div>
 </template>
 
